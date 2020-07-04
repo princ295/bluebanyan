@@ -46,8 +46,8 @@ export class CovidService {
   }
 
 
-  getPeople(term: string = null): Observable<any[]> {
-    let items = getMockPeople();
+  getinfo(term: string = null): Observable<any[]> {
+    let items = getinfocountry();
     // if (term) {
     //     items = items.filter(x => x.name.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1);
     // }
@@ -57,7 +57,7 @@ export class CovidService {
 
 
 
-function getMockPeople() {
+function getinfocountry() {
   return [
       {
         "id": 2,

@@ -23,11 +23,11 @@ export class CovidDashboardComponent implements OnInit {
 
   ngOnInit(): void {
 
-    if(confirm('Please Update your profile if you alrady have done then ignore this press cancel button:)')){
-      this.route.navigate(['up_profile'])
-    }
+    // if(confirm('Please Update your profile if you alrady have done then ignore this press cancel button:)')){
+    //   this.route.navigate(['up_profile'])
+    // }
     
-    this._ = this.covid.getPeople();
+    this._ = this.covid.getinfo();
 
     this.covid.getCountry().subscribe((info)=>{
       this.covid.getState('Chhattisgarh').subscribe((res)=>{
