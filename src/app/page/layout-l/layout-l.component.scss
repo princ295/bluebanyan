@@ -1,0 +1,13 @@
+@import "../../../main-style.scss";
+
+
+.layout-l-box{
+    // background: linear-gradient(to right top,$light-red, $red);
+    background: linear-gradient(to right, $pink, $blue);
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

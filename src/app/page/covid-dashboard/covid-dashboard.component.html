@@ -1,0 +1,54 @@
+<div class="covid-info">
+    <div class="covid-container">
+        <h1 class="covid-title">Covid-19</h1>
+        <h3 class="covid-subtitle">
+            Confirm Cases: <span>{{obj.confirmed}}</span> | Active Cases: <span>{{obj.active}}</span> | Recovered Cases: <span>{{obj.recovered}}</span> | Deceased Cases: <span>{{obj.deaths}}</span>  
+        </h3>
+        <h4 class="covid-last-update">{{obj.lastRefreshed}}</h4>
+    </div>
+
+    <div class="main-content">
+
+        <div class="main-block">
+            <div class="content-title">
+                <h3>Search by Indian State</h3>
+            </div>
+
+            <div class="ng-block">
+                <ng-select [items]="_ | async"
+                    bindLabel="state"
+                    autofocus
+                    bindValue="id"
+                    (change)="onchange($event)"
+                    [(ngModel)]="id">
+                </ng-select>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <div>
+        <div class="card-container">
+   
+            <div class="card-cantent">
+                <div class="card-title">Now Currenty Case In {{info.state}}</div>
+        
+                <div class="card-body">
+                    <h3 class="covid-body-element">
+                        Confirm Cases: <span>{{info.confirmed}}</span> | Active Cases: <span>{{info.active}}</span> | Recovered Cases: <span>{{info.recovered}}</span> | Deceased Cases: <span>{{info.deaths}}</span>  
+                    </h3>
+                    <h6 class="covid-last-update">{{obj.lastRefreshed}}</h6>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+
+
+    <br><br><br><br><br>
+
+    <div align="center" class="covid-body-element">
+        <p>Getting information form Covid-19 india api https://api.covid19india.org/</p>
+    </div>
+
+</div>

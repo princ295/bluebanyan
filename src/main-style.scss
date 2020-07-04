@@ -1,0 +1,49 @@
+// Changing bulma variable and adding globale styles
+
+
+
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+// Set your brand colors
+$purple: #a59ad7;
+$pink: #fe76c2;
+$blue:#37c7f2;
+
+
+
+$light-red: #fff3f3;
+$light: #fafcff;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+
+$primary: $purple;
+$link: $blue;
+
+// Update some of Bulma's component variables
+$body-background-color: $light;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-background-color:#f3f5fa;
+$input-shadow: none;
+
+
+/* Global Style */
+html , body{
+ height: 100vh;
+
+ //Set default font size to 18px
+ font-size: 18px !important;
+ overflow: hidden !important;
+
+ margin: 0;
+
+}
+
+body{
+    margin: 0;
+}

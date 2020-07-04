@@ -1,0 +1,19 @@
+
+input{
+    border-bottom: 1px solid #747474;
+}
+.is-small{
+    width: 350px;
+    margin-top: 5px;
+}
+.button{
+    border-radius: 2px;
+    font-size: 0.75rem;
+    margin-top: 5px;
+    // background: #2d2d2d;
+    color: white;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:black;
+    opacity: 0.5; /* Firefox */
+}

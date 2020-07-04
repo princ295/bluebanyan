@@ -1,0 +1,37 @@
+@import "../../../main-style.scss";
+
+.profile-info{
+
+    height: 90vh;
+    max-width: 750px;
+
+    display: flex;
+    .upload-image{
+       width: 300px;
+    }
+    .profile-element{
+       width: 450px;
+    }
+    .profile-element{
+
+        padding: 5px;
+        .title{
+            text-align: center;
+            font-family: auto;
+
+            margin-top: 3px;
+            color: $purple;
+        }
+    }
+}
+
+img{
+
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+h1{
+    font-size: 27px;
+    font-weight: bold;
+}

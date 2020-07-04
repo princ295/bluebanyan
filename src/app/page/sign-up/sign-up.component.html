@@ -1,0 +1,69 @@
+<div class="centered-content">
+    <div class="signup-box">
+
+      <form [formGroup]="register" (ngSubmit)="onSubmit()">
+       
+
+      <h3 class="title">Sign Up</h3>
+        <div class="field">
+          <p class="control has-icons-left has-icons-right">
+            <input class="input is-small" type="text" formControlName="username" placeholder="Username" 
+                            [ngClass]="{ 'is-invalid': submit && f.username.errors }">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </p>
+          <div *ngIf="submit && f.username.errors" class="invalid-feedback">
+              <div *ngIf="f.username.errors.required" class="text_warning">User is required</div>
+          </div>
+        </div>
+        <div class="field">
+          <p class="control has-icons-left">
+            <input class="input is-small" type="email" formControlName="email" placeholder="Email"
+                          [ngClass]="{ 'is-invalid': submit && f.email.errors }">
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </p>
+          <div *ngIf="submit && f.email.errors" class="invalid-feedback">
+              <div *ngIf="f.email.errors.required" class="text_warning">Email is required</div>
+              <div *ngIf="f.email.errors.email" class="text_warning">Email must be a valid email address</div>
+          </div>
+        </div>
+        <div class="field">
+          <p class="control has-icons-left">
+            <input class="input is-small" type="text" formControlName="password1" placeholder="Password"
+                                [ngClass]="{ 'is-invalid': submit && f.password1.errors }">
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </p>
+          <div *ngIf="submit && f.password1.errors" class="invalid-feedback">
+            <div *ngIf="f.password1.errors.required" class="text_warning">password must be at least 8 digit </div>
+            <div *ngIf="f.password1.errors.minlength" class="text_warning">Password allow only number and character & Password must be at least 8 digit</div>
+          </div>
+        </div>
+        <div class="field">
+          <p class="control has-icons-left">
+            <input class="input is-small" type="password" formControlName="password2" placeholder="Enter Same Password"
+                      [ngClass]="{ 'is-invalid': submit && f.password2.errors }">
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </p>
+          <div *ngIf="submit && f.password2.errors" class="invalid-feedback">
+            <div *ngIf="f.password2.errors.required" class="text_warning">Confirm Password is required</div>
+            <div *ngIf="f.password2.errors.mustMatch" class="text_warning">Passwords must match</div>
+        </div>
+        </div> 
+        <div class="field is-pulled-right">
+          <div class="buttons is-right">
+            <button type="submit" class="button is-primary">Sign In</button>
+          </div>
+        </div> 
+        <br>
+        <p class="content">If you already regiter go to <a [routerLink]="['/U/s_in']">Login</a> here</p>
+      </form>
+    </div>
+    
+</div>

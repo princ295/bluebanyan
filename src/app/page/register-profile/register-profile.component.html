@@ -1,0 +1,61 @@
+<div class="profile-info">
+  <div class="upload-image">
+     
+    <h3>Choose File</h3>            
+    <div class="form-group">
+        <input type="file" name="image" (change)="fileProgress($event)" />
+    </div>
+    <div *ngIf="fileUploadProgress">
+        Upload progress: {{ fileUploadProgress }}
+    </div>
+    <br>
+    <div class="image-preview mb-3" *ngIf="previewUrl">
+        <img [src]="previewUrl" height="300" />                 
+    </div>
+
+    <div class="mb-3" *ngIf="uploadedFilePath">
+        {{uploadedFilePath}}
+    </div>
+    
+
+  </div>
+  <div class="profile-element">
+      <h2 class="title">Update Profile</h2>
+
+      <div class="field">
+          <label>First Name</label>
+          <p class="control has-icons-left has-icons-right">
+            <input class="input is-small" [(ngModel)]="obj.firstname" type="text" placeholder="Username">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </p>
+      </div>
+
+      <div class="field">
+          <label>Last Name</label>
+          <p class="control has-icons-left has-icons-right">
+            <input class="input is-small" [(ngModel)]="obj.lastname" type="text" placeholder="Username">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </p>
+      </div>
+
+      <div class="field">
+          <label>Address</label>
+          <p class="control has-icons-left has-icons-right">
+            <input class="input is-small" [(ngModel)]="obj.address" type="text" placeholder="Username">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </p>
+      </div>
+
+
+      <div class="buttons is-right">
+
+          <button class="button is-primary is-small" (click)= "onSubmit()">Update Profile</button>
+      </div>
+  </div>
+</div>
